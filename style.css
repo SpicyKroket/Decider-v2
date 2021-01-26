@@ -33,7 +33,7 @@ html {
   h1 h2 h3 p { font-style: normal;}
   h1 { font-weight:900;}
   h2 { font-weight: 800;}
-  h3 { font-weight: 600;}
+  h3 { font-weight: 600; margin: 5px;}
   p { font-weight: 500;}
 
   /* GRIDS FOR ALL PAGE */
@@ -46,7 +46,8 @@ html {
 
   /* GRID SETUPS */
   /* account creation page */
-  .form-fields { grid-column: 1 / 2; grid-row: 2 / 3;}
+  .form-fields { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin: 5vh 10vw}
+  .popup1 { grid-column: 1 / 2; grid-row: 1 / 3;}
   /* NAVBAR */
   .navbar {
       grid-column: 1 / 2;
@@ -86,6 +87,10 @@ html {
     user-select: none; 
   }
 
+  .button1:hover {
+    opacity: 0.9;
+  }
+
   .button2 {
     user-select: none;
     text-decoration: none;
@@ -98,20 +103,87 @@ html {
     color: #ffffff;
     font-weight: 600;
     padding: 6px;
-    user-select: none; 
+    user-select: none;
+    text-align: center;
     text-decoration: none;
   }
 
   .button3:hover {
     opacity: 0.9;
-    font-size: 0.95rem;
+  }
+
+  .centered-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form1 {
+    border: 1px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-family: 'objektiv-mk1';
+    font-size:1rem;
+    margin: 5px 10px;
+    margin-bottom: 20px;
+    padding: 5px 13px;
+    outline: none;
+  }
+
+  .flex-start-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .flex-start-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .flex-start-column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+  }
+
+  .fullpage-box{
+    width: 60vw;
+    margin: 2vh auto;
+  }
+
+  .popup1 {
+    width: 30vw;
+    border-radius: 50px;
+  }
+
+  .spaced-evenly-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .shadow1{
       box-shadow: 3px 3px 10px 2px lightgrey;
   }
 
-  .fullpage-box{
-      width: 60vw;
-      margin: 2vh auto;
+  #expandingbox2 {
+    display:none;
+  }
+
+  #popup {
+    display:none;
   }
