@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decider | Account aanmaken</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rlz5czo.css">
+</head>
+<body class="account-creation-grid">
+    <div class="navbar">
+        <input type="text" class="navbar-search">
+        <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px;">
+        <div style="margin-right: 1vw">
+            <a href="login-page.html" class="button3">Inloggen</a>
+        </div>
+    </div>
+    
+    <div class="form-fields flex-start-column-left"  id="page">
+        <h1>Voer je gegevens in om een account aan te maken</h1>
+        <div style="text-align: left;">
+            <h3 style="margin-left: 25px;">Voornaam</h3>
+            <input type="text" class="form1 shadow1" id="nameform">
+            <p id="demo"></p>
+        </div>
+        <div class="flex-start-row" style="text-align: left;">
+            <div>
+                <h3 style="margin-left: 25px;">Tussenvoegsel</h3>
+                <input type="text" class="form1 shadow1" id="nameform1">
+            </div>
+            <div>
+                <h3 style="margin-left: 25px;">Achternaam</h3>
+                <input type="text" class="form1 shadow1">
+            </div>
+        </div>
+
+        <div class="flex-start-row" style="text-align: left;">
+            <div>
+                <h3 style="margin-left: 25px;">Leeftijd</h3>
+                <input type="date" class="form1 shadow1">
+            </div>
+
+            <div>
+                <h3 style="margin-left: 25px;">Geslacht</h3>
+                <select class="form1 shadow1">
+                    <option>Man</option>
+                    <option>Vrouw</option>
+                    <option>Anders</option>
+                    <option>Vertel ik liever niet</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="flex-start-row" style="text-align: left;">
+            <div>
+                <h3 style="margin-left: 25px;">E-mail</h3>
+                <input type="text" class="form1 shadow1">
+            </div>
+            <div>
+                <h3 style="margin-left: 25px;">Herhaal e-mail</h3>
+                <input type="text" class="form1 shadow1">
+            </div>
+        </div>
+
+        <div class="flex-start-row" style="text-align: left;">
+            <div>
+                <h3 style="margin-left: 25px;">Wachtwoord</h3>
+                <input type="password" class="form1 shadow1">
+            </div>
+            <div>
+                <h3 style="margin-left: 25px;">Herhaal wachtwoord</h3>
+                <input type="password" class="form1 shadow1">
+            </div>
+        </div>
+
+        <a onclick="showPopUp(); setUsername(); changeStatus()" class="button1 shadow1" style="width: 11rem; margin-left:10px;">Account aanmaken</a>
+        <script>
+            function showPopUp() {
+                var x = document.getElementById("popup");
+                var currentPage = document.getElementById("page");
+                if (x.style.display === "block") {
+                    //currentPage.style.opacity = "0.4";
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                    //currentPage.style.opacity = "1";
+                }
+            }
+
+            function setUsername(){
+                var formData = document.getElementById("nameform").value;
+                document.cookie = formData + ';';
+            }
+
+            function changeStatus() {
+                alert("1")
+                var cData = document.cookie;
+                var cSplit = cData.split(';');
+                if (cSplit.startsWith("status=")) {
+                    var cProcessed = cSplit[0].split('=');
+                } else { var cProcessed = cSplit[1].split('='); }
+                
+                alert("2")
+                var status = cProcessed[1];
+                alert(status);
+                if (status == "Inloggen"){
+                    document.cookie = "status=Log uit";
+                }
+                alert("didnt fail");
+            }
+
+            
+        </script>
+    </div>
+
+    <div class="box2 popup1" id="popup" style="margin: auto;">
+        <h2> Je account is aangemaakt!</h2>
+        <a href="user-dashboard.html" class="button3">Naar je profiel</a>
+    </div>
+</body>

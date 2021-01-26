@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decider | Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rlz5czo.css">
+</head>
+<body class="homepage-grid">
+    <div class="navbar">
+        <input type="text" class="navbar-search">
+        <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px;">
+        <div style="margin-right: 1vw">
+            <a href="login-page.html" class="button3">Inloggen</a>
+        </div>
+    </div>
+    <div class="homepagebox" style="margin-top: 4vh;">
+        <div class="box2 shadow1 fullpage-box">
+            <h1>Laat ons je helpen met jou studiekeuze!</h1>
+            <a onclick="displayBox()" class="button3">Klik mij om te weten hoe</a>
+        </div>
+        <div class="expandingbox box1 shadow1 fullpage-box" id="expandingbox2">
+            <h2>Waarom zou ik een account aanmaken?</h2>
+            <p>Redenen waarom je een account moet aanmaken</p>
+            <a href="account-creation.html" class="button1">Ik wil een account</a>
+        </div>   
+
+        <script>
+            document.cookie = "status=Inloggen";
+            function displayBox() {
+                var x = document.getElementById("expandingbox2");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+    </div>
+</body>
