@@ -1,0 +1,117 @@
+/* CSS reset, dit niet aanpassen! */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Hieronder mag je eigen CSS code */
+  
+  /* BODY SETTINGS/VARIABLES */
+  body {
+      display: grid;
+      font-family: 'objektiv-mk1', Helvetica, Verdana, sans-serif;
+      text-align:center;
+      background-color: #ffffff;
+  }
+  
+  :root{
+      --navbar-height: 7vh;
+  }
+
+  /* FONT SETTINGS */
+  h1 h2 h3 p { font-style: normal;}
+  h1 { font-weight:900;}
+  h2 { font-weight: 800;}
+  h3 { font-weight: 600;}
+  p { font-weight: 500;}
+
+  /* GRIDS FOR ALL PAGE */
+  .homepage-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto; }
+  .account-creation-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto; }
+  .user-dashboard-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto; }
+  .test-page-grid { grid-template-columns: 60vw 40vw; grid-template-rows: var(--navbar-height) auto; }
+  .test-result-page-grid { grid-template-columns: 40vw 60vw; grid-template-rows: var(--navbar-height) auto; }
+  .study-info-grid { grid-template-columns: 70vw 30vw; grid-template-rows: var(--navbar-height) auto; }
+
+  /* GRID SETUPS */
+  /* account creation page */
+  .form-fields { grid-column: 1 / 2; grid-row: 2 / 3;}
+  /* NAVBAR */
+  .navbar {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      background-color: #353535;
+      
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .navbar-2 { grid-column: 1 / 3; }
+
+  /* GENERAL PURPOSE */
+  .box1 {
+      background-color: #ffffff;
+      border: 1px;
+      border-radius: 15px;
+      padding: 1rem;
+  }
+
+  .box2 {
+    background-color: #0f00ec;
+    border: 1px;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 1rem;
+  }
+
+  .button1 {
+    background-color: #0f00ec;
+    border: 3px;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 9px;
+    text-decoration: none;
+    user-select: none; 
+  }
+
+  .button2 {
+    user-select: none;
+    text-decoration: none;
+  }
+
+  .button3 {
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 6px;
+    user-select: none; 
+    text-decoration: none;
+  }
+
+  .button3:hover {
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+
+  .shadow1{
+      box-shadow: 3px 3px 10px 2px lightgrey;
+  }
+
+  .fullpage-box{
+      width: 60vw;
+      margin: 2vh auto;
+  }
