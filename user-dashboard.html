@@ -10,19 +10,9 @@
 <body class="user-dashboard-grid">
     <div class="navbar navbar3">
         <input type="text" class="navbar-search">
-        <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px;">
+        <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px auto;">
         <div style="margin-right: 1vw">
-            <a href="login-page.html" class="button3" id="loggedStatus">Inloggen</a>
-            <script>
-                var cData = document.cookie;
-                var cSplit = cData.split(';');
-                if (cSplit.startsWith("status=")) {
-                    var cProcessed = cSplit[0].split('=');
-                } else { var cProcessed = cSplit[1].split('='); }
-                
-                var status = cProcessed[1];
-                document.getElementById("loggedStatus").innerHTML = status;
-            </script>
+            <a href="homepage.html" class="button3 button-hover">Log uit</a>
         </div>
     </div>
 
@@ -34,12 +24,40 @@
 
     <div class="container1 box1 box1-addon1 shadow1" style="margin-right:15px;">
         <h2>Studies die misschien voor jou zijn</h2>
+            <div class="spaced-evenly-row">
+                <div class="box1 box-addon2 shadow1">
+                    <p>1</p>
+                </div>
+                <div class="box1 box-addon2 shadow1">
+                    <p>2</p>
+                </div>
+            </div>
+            <div class="spaced-evenly-row">
+                <div class="box1 box-addon2 shadow1">
+                    <p>3</p>
+                </div>
+                <div class="box1 box-addon2 shadow1">
+                    <p>4</p>
+                </div>
+            </div>        
     </div>
+
     <div class="container2 box1 box1-addon1 shadow1" style="margin-right:15px; margin-left:15px;">
         <h2>Testen</h2>
-        <a href="test-page.html" class="button2 button2-addon1"><b>+ Nieuwe test</a>
+        <a href="test-page.html" class="button2 button2-addon1 button-hover"><b>+ Nieuwe test</a>
     </div>
-    <div class="container3 box1 box1-addon1 shadow1"style="margin-left:15px;">
+    <div class="container3 box1 box1-addon1 shadow1" style="margin-left:15px;">
         <h2>Jou voortgang</h2>
+        <progress value="40" max="100" class="progressbar1 "></progress>
+        <div style="text-align: left; margin-left:5%;">
+            <h3 style="margin-top: 20px;">Doelen: </h3>
+            <ul style="margin: 3px; font-size: 1.2rem;">
+                <li>Doel 1</li>
+                <li>Doel 2</li>
+                <li>Doel 3</li>
+                <li>Doel 4</li>
+            </ul>
+        </div>
+        
     </div>
 </body>

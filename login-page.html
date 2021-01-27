@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="https://use.typekit.net/rlz5czo.css">
 </head>
 <body class="login-page-grid">
-    <button onclick="myFunction()">Try it</button>
-    <div id="myDiv">
-        <h1> test </h1>
+    <div class="navbar">
+        <input type="text" class="navbar-search">
+        <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px auto;">
     </div>
+
+    <div class="content-align">
+        <h1 style="margin-left: 20px;">Inloggen</h1>
+        <div class="flex-start-column-left">
+            <h3 style="margin-left: 20px;">Gebruikersnaam</h3>
+            <input type="text" class="form1 shadow1" id="nameform">
+            <h3 style="margin-left: 20px;">Wachtwoord</h3>
+            <input type="password" class="form1 shadow1" id="nameform">
+
+            <a href="user-dashboard.html" onclick="setUsername();" class="button1 button-hover" style="margin:10px; text-align:center;">Inloggen</a>
+            <a href="account-creation.html" class="button4 button-hover" style="margin:10px; margin-top:5px; text-align:center;">Account aanmaken</a>
+        </div>
+    </div>
+
     <script>
-        function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-                x.style.display = "none";
-                }
-        }
-        </script>
+        function setUsername(){
+                var formData = document.getElementById("nameform").value;
+                document.cookie = formData + ';';
+            }
+    </script>
 </body>

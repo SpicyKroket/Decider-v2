@@ -33,7 +33,7 @@ html {
   h1 h2 h3 p { font-style: normal;}
   h1 { font-weight:900; font-size: 2.5rem;}
   h2 { font-weight: 800; font-size: 2rem;}
-  h3 { font-weight: 600; font-size: 1.25rem; margin: 5px;}
+  h3 { font-weight: 600; font-size: 1.4rem; margin: 5px;}
   p { font-weight: 500;}
 
   /* GRIDS FOR ALL PAGE */
@@ -43,6 +43,7 @@ html {
   .test-page-grid { grid-template-columns: 60vw 40vw; grid-template-rows: var(--navbar-height) auto; }
   .test-result-page-grid { grid-template-columns: 40vw 60vw; grid-template-rows: var(--navbar-height) auto; }
   .study-info-grid { grid-template-columns: 70vw 30vw; grid-template-rows: var(--navbar-height) auto; }
+  .login-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto;  }
 
   /* GRID SETUPS */
   /* account creation page */
@@ -52,7 +53,11 @@ html {
   .container1 { grid-column: 1 / 2; grid-row: 3 / 4;} 
   .container2 { grid-column: 2 / 3; grid-row: 3 / 4;}
   .container3 { grid-column: 3 / 4; grid-row: 3 / 4;}
-
+  /* login page */
+  .content-align { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin:5vh 40vw;}
+  /* test page */
+  .test-content { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin: 5vh 10vw;}
+  .test-image { grid-column: 2 / 3; grid-row: 2 / 3; }
   /* NAVBAR */
   .navbar {
       grid-column: 1 / 2;
@@ -94,6 +99,12 @@ html {
   }
 
   /* GENERAL PURPOSE */
+  .background-image1 {
+    background-image: url("img/testpage2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   .box1 {
       background-color: #ffffff;
       border: 1px;
@@ -105,6 +116,10 @@ html {
     margin: 30px;
   }
 
+  .box1-addon2 {
+    margin: 10px 5px;
+  }
+
   .box2 {
     background-color: #0f00ec;
     border: 1px;
@@ -113,18 +128,26 @@ html {
     padding: 1rem;
   }
 
+  .box3 {
+    background-color: lightgrey;
+    border: 1px;
+    border-radius: 15px;
+    padding: 1rem;
+  }
+
   .button1 {
     background-color: #0f00ec;
-    border: 3px;
+    border: 3px solid #0f00ec;
     border-radius: 20px;
     color: #ffffff;
-    padding: 9px;
+    font-weight: 800;
+    padding: 6px;
     text-decoration: none;
     user-select: none; 
   }
 
   .button1:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .button2 {
@@ -137,6 +160,7 @@ html {
     padding:10px;
     user-select: none;
     text-decoration: none;
+    width: 70%;
   }
 
   .button2-addon1 {
@@ -155,8 +179,19 @@ html {
     text-decoration: none;
   }
 
-  .button3:hover {
+  .button-hover:hover {
     opacity: 0.9;
+  }
+
+  .button4 {
+    background-color: transparent;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: 800;
+    padding: 6px;
+    text-decoration: none;
+    user-select: none;
   }
 
   .centered-row{
@@ -216,8 +251,34 @@ html {
     border-radius: 50px;
   }
 
+  .progressbar1 {
+    -webkit-appearance: none;
+    -moz-appearnce: none;
+    appearance: none;
+    height: 45px;
+    width: 90%;
+  }
+
+  .progressbar1::-webkit-progress-bar {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 2px lightgrey;
+  }
+
+  .progressbar1::-webkit-progress-value {
+    background-color: #00edce;
+    border-radius: 30px;
+  }
+
   .shadow1{
     box-shadow: 3px 3px 10px 2px lightgrey;
+  }
+
+  .spaced-evenly-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .spaced-evenly-row{
