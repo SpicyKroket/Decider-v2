@@ -42,7 +42,7 @@ html {
   .user-dashboard-grid { grid-template-columns: 33vw 34vw 33vw; grid-template-rows: var(--navbar-height) 15vh auto; }
   .test-page-grid { grid-template-columns: 60vw 40vw; grid-template-rows: var(--navbar-height) auto; }
   .test-result-page-grid { grid-template-columns: 40vw 60vw; grid-template-rows: var(--navbar-height) auto; }
-  .study-info-grid { grid-template-columns: 40vw 60vw; grid-template-rows: var(--navbar-height) auto}
+  .study-info-grid { grid-template-columns: 60vw 40vw; grid-template-rows: var(--navbar-height) auto}
   .login-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto;  }
 
   /* GRID SETUPS */
@@ -62,8 +62,8 @@ html {
   .study-content-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 5vh 5vw;}
   .study-image-grid { grid-column: 2 / 3; grid-row: 2 / 3; }
   /* test result grid */
-  .test-results-grid { grid-column: 1 / 2; grid-row: 2 / 3; background-color: magenta; }
-  .test-results-image-grid { grid-column: 2 / 3; grid-row: 2 / 3; background-color: yellow; }
+  .test-results-grid { grid-column: 2 / 3; grid-row: 2 / 3; margin: 5vh 1vw;}
+  .test-results-image-grid { grid-column: 1 / 2; grid-row: 2 / 3; }
   /* NAVBAR */  
   .navbar {
     grid-column: 1 / 2;
@@ -118,6 +118,14 @@ html {
     background-position: center;
     background-size: contain;
   }
+  
+  .background-image3 {
+    background-image: url("img/testpage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   .box1 {
       background-color: #ffffff;
       border: 1px;
@@ -187,7 +195,6 @@ html {
     padding:10px;
     user-select: none;
     text-decoration: none;
-    width: 70%;
   }
 
   .button2-addon1 {
@@ -227,6 +234,7 @@ html {
     border-color: #ffffff;
     border-radius: 15px;
     padding: 1rem;
+    margin: 1rem;
     box-shadow: 3px 3px 10px 2px lightgrey;
     font-weight: 800; 
     font-size: 1.8rem;
@@ -339,6 +347,10 @@ html {
 
   .test-question {
     margin: 28px;
+  }
+
+  .test-results{
+    text-align: left;
   }
 
   .spaced-evenly-row{
