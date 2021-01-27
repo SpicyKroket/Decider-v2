@@ -75,15 +75,16 @@
 
         <a onclick="showPopUp(); setUsername(); changeStatus()" class="button1 shadow1" style="width: 11rem; margin-left:10px;">Account aanmaken</a>
         <script>
+            //Dit werkt niet
             function showPopUp() {
                 var x = document.getElementById("popup");
                 var currentPage = document.getElementById("page");
                 if (x.style.display === "block") {
-                    //currentPage.style.opacity = "0.4";
+                    currentPage.style.opacity = '1';
                     x.style.display = "none";
                 } else {
                     x.style.display = "block";
-                    //currentPage.style.opacity = "1";
+                    currentPage.style.opacity = '0.4';
                 }
             }
 
@@ -91,25 +92,6 @@
                 var formData = document.getElementById("nameform").value;
                 document.cookie = formData + ';';
             }
-
-            function changeStatus() {
-                alert("1")
-                var cData = document.cookie;
-                var cSplit = cData.split(';');
-                if (cSplit.startsWith("status=")) {
-                    var cProcessed = cSplit[0].split('=');
-                } else { var cProcessed = cSplit[1].split('='); }
-                
-                alert("2")
-                var status = cProcessed[1];
-                alert(status);
-                if (status == "Inloggen"){
-                    document.cookie = "status=Log uit";
-                }
-                alert("didnt fail");
-            }
-
-            
         </script>
     </div>
 

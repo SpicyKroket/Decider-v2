@@ -113,8 +113,6 @@ html {
     padding: 1rem;
   }
 
-  
-
   .button1 {
     background-color: #0f00ec;
     border: 3px;
@@ -214,7 +212,7 @@ html {
   }
 
   .popup1 {
-    width: 30vw;
+    width: 40vw;
     border-radius: 50px;
   }
 
