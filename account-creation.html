@@ -9,7 +9,6 @@
 </head>
 <body class="account-creation-grid">
     <div class="navbar">
-        <input type="text" class="navbar-search">
         <input type="image" src="img/logo.png" onclick="location.href='homepage.html';" style="width:9%; margin:20px auto;">
     </div>
     
@@ -71,19 +70,17 @@
 
         <a onclick="showPopUp(); setUsername(); changeStatus()" class="button1 shadow1" style="width: 11rem; margin-left:10px;">Account aanmaken</a>
         <script>
-            //Dit werkt niet
             function showPopUp() {
-                var x = document.getElementById("popup");
+                var popupBox = document.getElementById("popup");
                 var currentPage = document.getElementById("page");
-                if (x.style.display === "block") {
-                    currentPage.style.opacity = '1';
-                    x.style.display = "none";
+                if (popupBox.style.display === "block") {
+                   currentPage.style.opacity = "1";
+                    popupBox.style.display = "none";
                 } else {
-                    x.style.display = "block";
-                    currentPage.style.opacity = '0.4';
+                    currentPage.style.opacity = "0.4";
+                    popupBox.style.display = "block"; 
                 }
             }
-
             function setUsername(){
                 var formData = document.getElementById("nameform").value;
                 document.cookie = formData + ';';
