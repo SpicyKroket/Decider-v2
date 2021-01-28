@@ -267,6 +267,19 @@ html {
     align-items: center;
     justify-content: center;
   }
+
+  .container1-margin {
+    margin-right: 15px;
+  }
+
+  .container2-margin {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .container3-margin {
+    margin-left: 15px;
+  }
   
   .form1 {
     border: 1px;
@@ -282,8 +295,8 @@ html {
 
   .flex-start-row {
     display: flex;
+    text-align: center;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-start;
   }
 
@@ -306,9 +319,31 @@ html {
     margin: 2vh auto;
   }
 
+  .list-position1 {
+    margin: 15px;
+    margin-left: 30%;
+    font-size: 1.2rem;
+    text-align:left;
+  }
+
+  .logo-dimensions {
+    margin: 20px;
+    
+    margin-right: auto;
+    height: 92%;
+  }
+
   .popup1 {
-    width: 40vw;
     border-radius: 50px;
+    margin: auto;
+    width: 40vw;
+    z-index: 1;
+  }
+
+  .popup2 {
+    border-radius: 50px;
+    margin: auto;
+    width: 40vw;
     z-index: 1;
   }
 
@@ -335,6 +370,10 @@ html {
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.2em;
+  }
+
+  .question-margin {
+    margin-left: 30px;
   }
 
   .shadow1{
@@ -367,6 +406,7 @@ html {
       justify-content: space-between;
   }
 
+  /* ID's FOR JS*/
   #expandingbox2 {
     display:none;
   }
@@ -378,3 +418,134 @@ html {
   #page {
     z-index: 0;
   }
+
+
+
+  /* MOBILE VERSION */
+  @media (max-width: 1000px) {
+    /* GRID CORRECTIONS */
+    /* USER DASHBOARD */
+    .user-dashboard-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 13vh 42vh 33vh 60vh; }
+    .container1 { grid-column: 1 / 2; grid-row: 5 / 6;} 
+    .container2 { grid-column: 1 / 2; grid-row: 4 / 5;}
+    .container3 { grid-column: 1 / 2; grid-row: 3 / 4}
+
+    /* STUDY INFO */
+    .study-info-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 105vh 30vh; }
+    .study-content-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 1vh 10vw;}
+    .study-image-grid { grid-column: 1 / 2; grid-row: 3 / 4; margin: 5vh 10vw;}
+
+    /* TEST PAGE */
+    .test-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto }
+    .test-content-grid { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin: 5vh 10vw;}
+
+    /* TEST RESULT PAGE */
+    .test-result-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 90vh 70vh; }
+    .test-results-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 5vh 5vw;}
+    .test-results-image-grid { grid-column: 1 / 2; grid-row: 3 / 4; }
+
+    /* LOGIN PAGE */
+    .content-align { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin:5vh 10vw;}
+
+    /* NAVBAR */
+    .navbar3 { grid-column: 1 / 2; }
+    .navbar2 { grid-column: 1 / 2; }
+    .navbar3 { grid-column: 1 / 2; }
+
+    h1 h2 h3 p { font-style: normal;}
+    h1 { font-weight:900; font-size: 2rem;}
+    h2 { font-weight: 800; font-size: 2rem;}
+    h3 { font-weight: 600; font-size: 1.4rem; margin: 5px;}
+    p { font-weight: 500;}
+
+    .background-image1 {
+      display: none;
+    }
+    .box4 {
+      font-size: 1rem;
+    }
+
+    .container-margin {
+      margin: 20px;
+      margin-top: 0px;
+    }
+
+    .flex-start-row {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+
+    .fullpage-box {
+      width: 90vw;
+    }
+
+    .list-position1 {
+      margin-left: 8%;
+    }
+    
+    .logo-dimensions {
+      margin-left: 0px;
+      background-image: url("img/mobile-logo.png");
+    }
+
+    .mediaquery-nodisp {
+      display: none;
+    }
+
+    .mediaquery-aligncenter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* .mediaquery-alignleft {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    } */
+
+    .mediaquery-align-vertical-center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 80vw;
+    }
+
+    .popup2 {
+      position: fixed;
+      margin-left: 50vw;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 80vw;
+    }
+
+    .p-studyinfo {
+      font-size: 1rem;
+    }
+
+    .question-margin {
+      margin-left: 10px;
+    }
+
+    #mediaoverride {
+      margin-left: 25px;
+      padding: 0px;
+      display: block;
+    }
+  }
+
+  

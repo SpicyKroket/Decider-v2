@@ -9,7 +9,7 @@
 </head>
 <body class="user-dashboard-grid">
     <div class="navbar navbar3">
-        <input type="image" src="img/logo.png" onclick="location.href='user-dashboard.html';" style="width:9%; margin:20px; margin-left: 44.5%; margin-right: auto;">
+        <input type="image" src="img/logo.png" onclick="location.href='user-dashboard.html';" id="logo" style="width:9%; margin:20px; margin-left: 44.5%; margin-right: auto;">
         <div style="margin-right: 1vw">
             <a href="homepage.html" class="button3 button-hover">Log uit</a>
         </div>
@@ -21,7 +21,7 @@
         document.getElementById("title").innerHTML = "Welkom terug " + cData + "!";
     </script>
 
-    <div class="container1 box1 box1-addon1 shadow1" style="margin-right:15px;">
+    <div class="container1 box1 box1-addon1 shadow1 container-margin">
         <h2>Studies die misschien voor jou zijn</h2>
         <div>
             <div class="button5 box1-addon2">
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="container3 box1 box1-addon1 shadow1" style="margin-left:15px;">
+    <div class="container3 box1 box1-addon1 shadow1 container-margin">
         <h2>Jou voortgang</h2>
         <progress value="15" max="100" class="progressbar1 "></progress>
         <div style="text-align: left; margin-left:5%;">
@@ -55,7 +55,7 @@
         </div>     
     </div>
 
-    <div class="container2 box1 box1-addon1 shadow1" style="margin-right:15px; margin-left:15px;">
+    <div class="container2 box1 box1-addon1 shadow1 container-margin">
         <h2>Testen</h2>
         <a href="test-page.html" class="button2 button2-addon1 button-hover"><b>+ Nieuwe test</a>
     </div>

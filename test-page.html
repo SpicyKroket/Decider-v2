@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="test-image-grid box1 box1-addon1 shadow1 background-image1"></div>
+    <div class="test-image-grid box1 box1-addon1 shadow1 background-image1 mediaquery-nodisp"></div>
 
     <div class="test-content-grid box1-addon1" id="page">
         <h1>Persoonlijkheidstest</h1>
@@ -27,8 +27,8 @@
         <div class="box1 shadow1">
             <div class="test-question">
                 <h3>Vraag 1: Ik maak me veel zorgen</h3>
-                <div style="margin-left:30px">
-                    <input type="radio" name="groep1"> Helemaal niet mee eens
+                <div class="mediaquery-alignleft question-margin">
+                    <input type="radio" name="groep1"> <span>Helemaal niet mee eens</span><br>
                     <input type="radio" name="groep1"> Niet mee eens
                     <input type="radio" name="groep1"> Neutraal
                     <input type="radio" name="groep1"> Mee eens
@@ -38,7 +38,7 @@
     
             <div class="test-question">
                 <h3>Vraag 2: Ik heb een levendige fantasie</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep2"> Helemaal niet mee eens
                     <input type="radio" name="groep2"> Niet mee eens
                     <input type="radio" name="groep2"> Neutraal
@@ -49,7 +49,7 @@
     
             <div class="test-question">
                 <h3>Vraag 3: Ik vind kunst belangrijk</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep3"> Helemaal niet mee eens
                     <input type="radio" name="groep3"> Niet mee eens
                     <input type="radio" name="groep3"> Neutraal
@@ -60,7 +60,7 @@
     
             <div class="test-question">
                 <h3>Vraag 4: Ik hou niet van wanorde en ruim graag op</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep4"> Helemaal niet mee eens
                     <input type="radio" name="groep4"> Niet mee eens
                     <input type="radio" name="groep4"> Neutraal
@@ -71,7 +71,7 @@
     
             <div class="test-question">
                 <h3>Vraag 5: Ik help graag anderen</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep5"> Helemaal niet mee eens
                     <input type="radio" name="groep5"> Niet mee eens
                     <input type="radio" name="groep5"> Neutraal
@@ -82,7 +82,7 @@
     
             <div class="test-question">
                 <h3>Vraag 6: Ik voel me vaak verdrietig</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep6"> Helemaal niet mee eens
                     <input type="radio" name="groep6"> Niet mee eens
                     <input type="radio" name="groep6"> Neutraal
@@ -93,7 +93,7 @@
     
             <div class="test-question">
                 <h3>Vraag 7: Ik ben altijd bezig en druk met dingen</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep7"> Helemaal niet mee eens
                     <input type="radio" name="groep7"> Niet mee eens
                     <input type="radio" name="groep7"> Neutraal
@@ -104,7 +104,7 @@
     
             <div class="test-question">
                 <h3>Vraag 8: Ik ben een harde werker</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep8"> Helemaal niet mee eens
                     <input type="radio" name="groep8"> Niet mee eens
                     <input type="radio" name="groep8"> Neutraal
@@ -115,7 +115,7 @@
     
             <div class="test-question">
                 <h3>Vraag 9: Ik ben snel in paniek</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep9"> Helemaal niet mee eens
                     <input type="radio" name="groep9"> Niet mee eens
                     <input type="radio" name="groep9"> Neutraal
@@ -126,7 +126,7 @@
     
             <div class="test-question">
                 <h3>Vraag 10: Ik probeer andere te sturen en dingen te bepalen</h3>
-                <div style="margin-left:30px">
+                <div class="mediaquery-alignleft question-margin">
                     <input type="radio" name="groep10"> Helemaal niet mee eens
                     <input type="radio" name="groep10"> Niet mee eens
                     <input type="radio" name="groep10"> Neutraal
@@ -153,10 +153,12 @@
         </div>
     </div>
 
-    <div class="popup1 box2 shadow1" id="popup" style="margin: auto">
+    <div class="popup2 box2 shadow1" id="popup">
         <h1>Je hebt de test afgerond!</h1>
-        <a href="user-dashboard-na-test.html" class="button3" style="margin:10px">Terug naar profiel</a>
-        <a href="test-result-page.html" class="button3" style="margin:10px">Naar resultaten</a>
+        <div class="mediaquery-aligncenter">
+            <a href="test-result-page.html" class="button3" style="margin:10px">Naar resultaten</a>
+            <a href="user-dashboard-na-test.html" class="button3" style="margin:10px">Terug naar profiel</a>
+        </div>
     </div>
 
 </body>
