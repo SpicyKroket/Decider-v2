@@ -301,7 +301,7 @@ html {
   }
 
   .logo-dimensions {
-    margin-left: 10px;
+    margin-left: 45%;
     width: 9%;
   }
 
@@ -317,10 +317,10 @@ html {
   }
 
   .popup2 {
-    border-radius: 50px;
-    margin: auto;
+    position: fixed;
+    margin-left: 10vw;
+    margin-top: 35vh;
     width: 40vw;
-    z-index: 1;
   }
 
   .progressbar1 {
@@ -401,13 +401,13 @@ html {
   @media (max-width: 1000px) {
     /* GRID CORRECTIONS */
     /* USER DASHBOARD */
-    .user-dashboard-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 13vh 42vh 33vh 60vh; }
+    .user-dashboard-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 13vh auto auto auto; }
     .container1 { grid-column: 1 / 2; grid-row: 5 / 6;} 
     .container2 { grid-column: 1 / 2; grid-row: 4 / 5;}
     .container3 { grid-column: 1 / 2; grid-row: 3 / 4}
 
     /* STUDY INFO */
-    .study-info-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 105vh 30vh; }
+    .study-info-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto 30vh; }
     .study-content-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 1vh 10vw;}
     .study-image-grid { grid-column: 1 / 2; grid-row: 3 / 4; margin: 5vh 10vw;}
 
@@ -416,8 +416,8 @@ html {
     .test-content-grid { grid-column: 1 / 2; grid-row: 2 / 3; text-align: left; margin: 5vh 10vw;}
 
     /* TEST RESULT PAGE */
-    .test-result-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) 90vh 70vh; }
-    .test-results-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 5vh 5vw;}
+    .test-result-page-grid { grid-template-columns: auto; grid-template-rows: var(--navbar-height) auto 70vh; }
+    .test-results-grid { grid-column: 1 / 2; grid-row: 2 / 3; margin: 2vh 5vw;}
     .test-results-image-grid { grid-column: 1 / 2; grid-row: 3 / 4; }
 
     /* LOGIN PAGE */
@@ -426,7 +426,6 @@ html {
     /* NAVBAR */
     .navbar3 { grid-column: 1 / 2; }
     .navbar2 { grid-column: 1 / 2; }
-    .navbar3 { grid-column: 1 / 2; }
 
     h1 h2 h3 p { font-style: normal;}
     h1 { font-weight:900; font-size: 2rem;}
